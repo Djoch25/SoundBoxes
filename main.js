@@ -20,6 +20,11 @@ document.body.appendChild(cnv);
 ctx.fillStyle = "#000000";
 
 ctx.fillText("hello world", 250, 50);
+
+let i = 0;
+window.addEventListener("click", () => {
+	ctx.fillText(i++, 250, 150);
+});
 /*
 
 const WIDTH = Math.max(screen.width, screen.height);
