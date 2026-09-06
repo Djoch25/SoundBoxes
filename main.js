@@ -1,5 +1,5 @@
-const WIDTH = screen.width;
-const HEIGHT = screen.height;
+const WIDTH = Math.max(screen.width, screen.height);
+const HEIGHT = Math.min(screen.width, screen.height);
 
 class Ball {
 	constructor(x, y) {
