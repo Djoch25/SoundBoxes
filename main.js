@@ -1,3 +1,4 @@
+/*
 const WIDTH = Math.max(screen.width, screen.height);
 const HEIGHT = Math.min(screen.width, screen.height);
 
@@ -27,8 +28,9 @@ cnv.addEventListener("pointerdown", (event) => {
     ctx.fillText(i++, event.clientX, event.clientY);
 	cnv.requestFullscreen();
 });
+*/
 
-/*
+
 
 const WIDTH = Math.max(screen.width, screen.height);
 const HEIGHT = Math.min(screen.width, screen.height);
@@ -201,7 +203,7 @@ const startMic = async () => {
 
 
 let started = false;
-window.addEventListener("click", async () => {
+window.addEventListener("pointerdown", async () => {
     if (started) return;
     started = true;
 
@@ -220,4 +222,3 @@ window.addEventListener("click", async () => {
     }
 });
 
-*/
