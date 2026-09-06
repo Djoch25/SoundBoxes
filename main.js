@@ -167,8 +167,23 @@ const startMic = async () => {
 	console.log("Mic caricato");
 }
 
-window.addEventListener("click", () => {
-	document.body.requestFullscreen();
-});
 
-startMic().then(loop);
+let started = false;
+window.addEventListener("click", async () => {
+    if (started) return;
+    started = true;
+
+    try {
+        await startMic();
+
+        if (document.documentElement.requestFullscreen) {
+            await document.documentElement.requestFullscreen();
+        }
+
+        loop();
+    } catch (err) {
+		ctx.fillStyle = "#000000";
+        ctx.fillText(err, 0, 0);
+        started = false;
+    }
+});
