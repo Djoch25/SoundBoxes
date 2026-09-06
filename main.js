@@ -19,7 +19,7 @@ document.body.appendChild(cnv);
 
 ctx.fillStyle = "#000000";
 
-ctx.fillText("hello world", 50, 50);
+ctx.fillText("hello world", 250, 50);
 /*
 
 const WIDTH = Math.max(screen.width, screen.height);
