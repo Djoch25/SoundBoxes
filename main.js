@@ -25,6 +25,11 @@ let i = 0;
 window.addEventListener("click", () => {
 	ctx.fillText(i++, 250, 150);
 });
+
+cnv.addEventListener("pointerdown", (event) => {
+    ctx.fillText(i++, event.clientX, event.clientY);
+});
+
 /*
 
 const WIDTH = Math.max(screen.width, screen.height);
