@@ -1,6 +1,30 @@
 const WIDTH = Math.max(screen.width, screen.height);
 const HEIGHT = Math.min(screen.width, screen.height);
 
+const cnv = document.createElement("canvas");
+const ctx = cnv.getContext("2d");
+
+cnv.width = WIDTH;
+cnv.height = HEIGHT;
+
+cnv.style.position = "absolute";
+cnv.style.left = "0px";
+cnv.style.top = "0px";
+
+ctx.font = "50px bold Arial";
+ctx.textAlign = "center";
+ctx.textBaseline = "middle";
+
+document.body.appendChild(cnv);
+
+ctx.fillStyle = "#000000";
+
+ctx.fillText("hello world", 50, 50);
+/*
+
+const WIDTH = Math.max(screen.width, screen.height);
+const HEIGHT = Math.min(screen.width, screen.height);
+
 class Ball {
 	constructor(x, y) {
 		this.x = x;
@@ -187,3 +211,5 @@ window.addEventListener("click", async () => {
         started = false;
     }
 });
+
+*/
