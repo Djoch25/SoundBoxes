@@ -217,7 +217,7 @@ window.addEventListener("pointerdown", async () => {
         loop();
     } catch (err) {
 		ctx.fillStyle = "#000000";
-        ctx.fillText(err, 0, 0);
+        ctx.fillText(err, 100, 100);
         started = false;
     }
 });
