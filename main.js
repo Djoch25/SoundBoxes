@@ -25,6 +25,7 @@ let i = 0;
 
 cnv.addEventListener("pointerdown", (event) => {
     ctx.fillText(i++, event.clientX, event.clientY);
+	cnv.requestFullscreen();
 });
 
 /*
