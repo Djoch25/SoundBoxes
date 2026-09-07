@@ -141,6 +141,8 @@ const spacing = WIDTH / (boxNum + 1);
 const notes = ["C", "D", "E", "F", "G", "A", "B", "C"];
 const noteXs = [1, 3, 5, 6, 8, 10, 12, 13];
 
+let pitchOffset = 0;
+
 for (let i = 0; i < boxNum; i++) {
 	boxes[i] = new Box(spacing * noteXs[i], notes[i]);
 }
@@ -151,7 +153,7 @@ const loop = () => {
 
 	if (ID % 2 == 0) {
 		if (pitch != -1) {
-			const x = (pitch - 58) * WIDTH / 12;
+			const x = (pitch - 58 + pitchOffset) * spacing / 2;
 			balls.push(new Ball(x, 50));
 		};
 	}
@@ -206,6 +208,8 @@ const startMic = async () => {
 
 let started = false;
 window.addEventListener("pointerdown", async () => {
+	pitchOffset = pitchOffset == 0 ? 12 : 0;
+	
     if (started) return;
     started = true;
 
