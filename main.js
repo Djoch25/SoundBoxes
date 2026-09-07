@@ -102,7 +102,7 @@ let pitch = -1;
 let score = 0;
 
 const boxes = [];
-const boxNum = 5;
+const boxNum = 8;
 const spacing = WIDTH / (boxNum + 1) / 2;
 const notes = ["C", "D", "E", "F", "G", "A", "B", "C"];
 const noteXs = [1, 3, 5, 6, 8, 10, 12, 13];
@@ -119,7 +119,7 @@ const loop = () => {
 
 	if (ID % 2 == 0) {
 		if (pitch != -1) {
-			const x = (pitch - 58 + pitchOffset) * spacing;
+			const x = (pitch - 58 + pitchOffset) * spacing - spacing / 2;
 			balls.push(new Ball(x, 50));
 		};
 	}
