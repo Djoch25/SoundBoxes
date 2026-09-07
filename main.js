@@ -90,7 +90,7 @@ class Box {
 
 		this.x = x;
 		this.y = 500;
-		this.w = 100;
+		this.w = spacing;
 		this.w2 = this.w / 2;
 		this.h = 125;
 		this.h2 = this.h / 2;
@@ -136,12 +136,14 @@ let pitch = -1;
 let score = 0;
 
 const boxes = [];
+const boxNum = 5;
+const spacing = WIDTH / (boxNum + 1);
+const notes = ["C", "D", "E", "F", "G", "A", "B", "C"];
+const noteXs = [1, 3, 5, 6, 8, 10, 12, 13];
 
-boxes[0] = new Box(WIDTH / 6, "C");
-boxes[1] = new Box(WIDTH / 6 * 2, "D");
-boxes[2] = new Box(WIDTH / 6 * 3, "E");
-boxes[3] = new Box(WIDTH / 6 * 3.5, "F");
-boxes[4] = new Box(WIDTH / 6 * 4.5, "G");
+for (let i = 0; i < boxNum; i++) {
+	boxes[i] = new Box(spacing * noteXs[i], notes[i]);
+}
 
 let ID;
 const loop = () => {
