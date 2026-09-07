@@ -1,37 +1,3 @@
-/*
-const WIDTH = Math.max(screen.width, screen.height);
-const HEIGHT = Math.min(screen.width, screen.height);
-
-const cnv = document.createElement("canvas");
-const ctx = cnv.getContext("2d");
-
-cnv.width = WIDTH;
-cnv.height = HEIGHT;
-
-cnv.style.position = "absolute";
-cnv.style.left = "0px";
-cnv.style.top = "0px";
-
-ctx.font = "50px bold Arial";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
-
-document.body.appendChild(cnv);
-
-ctx.fillStyle = "#000000";
-
-ctx.fillText("hello world1", 250, 50);
-
-let i = 0;
-
-cnv.addEventListener("pointerdown", (event) => {
-    ctx.fillText(i++, event.clientX, event.clientY);
-	cnv.requestFullscreen();
-});
-*/
-
-
-
 const WIDTH = Math.max(screen.width, screen.height);
 const HEIGHT = Math.min(screen.width, screen.height);
 
@@ -137,7 +103,7 @@ let score = 0;
 
 const boxes = [];
 const boxNum = 5;
-const spacing = WIDTH / (boxNum + 1);
+const spacing = WIDTH / (boxNum + 1) / 2;
 const notes = ["C", "D", "E", "F", "G", "A", "B", "C"];
 const noteXs = [1, 3, 5, 6, 8, 10, 12, 13];
 
