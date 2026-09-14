@@ -120,7 +120,7 @@ const loop = () => {
 	if (ID % 2 == 0) {
 		if (pitch != -1) {
 			//const x = (pitch - 58.5 + pitchOffset) * spacing - spacing / 2;
-			const x = (pitch - 59) * spacing;
+			const x = (pitch - 59 + pitchOffset) * spacing;
 			balls.push(new Ball(x, 50));
 		};
 	}
